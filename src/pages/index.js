@@ -9,9 +9,6 @@ import ImageContext from '../components/ImageContext';
 import AboutMe from '../components/AboutMe';
 import Blogs from '../components/Blogs';
 import LogoClouds from '../components/LogoClouds';
-import GlowingCard from "../components/GlowingCard";
-import GlowButton from "../components/GlowButton";
-import GlowButton2 from "@/components/GlowButton2";
 import ServicesSection5 from "@/components/ServicesSection5";
 import MortgageAffordabilityCalculator from "@/components/MortgageAffordabilityCalculator";
 import MortgageCalculator from "@/components/MortgageCalculator";
@@ -27,7 +24,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-base-200">
       <Head>
-        <title>Welcome to Dominion Lending Centers</title>
+        <title>Veronica</title>
         <meta name="description" content="Find the best mortgage rates and services" />
       </Head>
 
@@ -39,9 +36,6 @@ export default function Home() {
       <MortgageCalculator />
       <MortgageCalculator1 />
       <MortgageApplicationForm />
-      <GlowingCard />
-      <GlowButton />
-      <GlowButton2 />
       <ImageContext />
       <Blogs />
       <Testimonials />

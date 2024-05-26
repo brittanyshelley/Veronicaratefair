@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ThemeSelector from './ThemeSelectors';
 
 export default function Footer() {
   return (
@@ -10,9 +10,11 @@ export default function Footer() {
           <p>Follow us on social media.</p>
         </div>
 
+        <ThemeSelector />
+
         <div className="text-center md:text-right">
           <p>Contact Us:</p>
-          <p>Email: info@dominionlending.com</p>
+          <p>Email: Veronica@ratefair.ca</p>
           <p>Phone: (123) 456-7890</p>
         </div>
       </div>
