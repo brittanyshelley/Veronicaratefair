@@ -11,7 +11,6 @@ import Navbar2 from "@/components/Navbar2";
 import Footer from "@/components/Footer";
 
 
-
 // If loading a variable font, you don't need to specify the font weight
 const inter = Montserrat({
   weight: ['400', '700'],
