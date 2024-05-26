@@ -3,17 +3,17 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const Navbar2 = () => {
-  const [navIsOpened, setNavIsOpened] = useState(false)
+  const [navIsOpened, setNavIsOpened] = useState(false);
   const closeNavbar = () => {
-    setNavIsOpened(false)
-  }
+    setNavIsOpened(false);
+  };
   const toggleNavbar = () => {
-    setNavIsOpened(navIsOpened => !navIsOpened)
-  }
+    setNavIsOpened(navIsOpened => !navIsOpened);
+  };
   return (
     <>
       <div aria-hidden={true} onClick={() => {
-        closeNavbar()
+        closeNavbar();
       }} className={
         `fixed bg-base-100/40 inset-0 z-30 ${navIsOpened ? "lg:hidden" : "hidden lg:hidden"}`
       } />
@@ -61,8 +61,7 @@ const Navbar2 = () => {
         </div>
       </div>
       <header className="sticky left-0 top-0 w-full flex items-center h-20  z-40 bg-base-100 bg-opacity-80 backdrop-filter backdrop-blur-xl">
-      <nav className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex gap-x-5 justify-between items-center ">
-
+        <nav className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex gap-x-5 justify-between items-center ">
           <div className="flex items-center min-w-max">
             <Link href="#" className="text-xl font-semibold flex items-center gap-x-2">
               {/* <span className="flex">
@@ -101,7 +100,7 @@ const Navbar2 = () => {
           </div>
           <div aria-hidden="true" className="flex items-center lg:hidden">
             <button onClick={() => {
-              toggleNavbar()
+              toggleNavbar();
             }} aria-label='toggle navbar' className="outline-none border-l border-base-content pl-3 relative py-3">
               <span aria-hidden={true} className={`
               flex h-0.5 w-6 rounded bg-base-content transition duration-300
@@ -116,8 +115,8 @@ const Navbar2 = () => {
         </nav>
       </header>
     </>
-  )
-}
+  );
+};
 export default Navbar2;
 
 
