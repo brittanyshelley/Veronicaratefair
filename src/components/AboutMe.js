@@ -3,7 +3,7 @@ export default function AboutMe() {
     <div className="container mx-auto bg-base-200 px-4 py-8">
       <div className="card lg:card-side  shadow-xl"> {/* Removed text-center here for better alignment control within children */}
         <div className="card-body text-center">
-          <h1 className="card-title text-3xl font-bold text-base-content">Brooke Shelley, Mortgage Broker</h1> {/* Adjusted class for emphasis and readability */}
+          <h1 className="card-title text-3xl font-bold text-base-content">Veronica Karup, Mortgage Broker</h1> {/* Adjusted class for emphasis and readability */}
           <p className="text-base-content">
             Fully licensed mortgage broker servicing British Columbia & Alberta.
             As a mortgage broker, I work directly for YOU, not the bank. It is my job to negotiate on behalf of my clients to obtain the best solution for your specific situation.

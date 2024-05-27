@@ -54,7 +54,7 @@ const ContactForm = () => {
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Brooke"
+                placeholder="Veronica"
                 className="input input-bordered w-full"
                 value={name}
                 onChange={e => setName(e.target.value)}
@@ -70,7 +70,7 @@ const ContactForm = () => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="brokerbrooke@brookeshelley.ca"
+                placeholder="veronica@ratefair.ca"
                 className="input input-bordered w-full"
                 value={email}
                 onChange={e => setEmail(e.target.value)}

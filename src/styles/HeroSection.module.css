@@ -1,0 +1,31 @@
+/* In your global CSS or a module CSS file */
+/* HeroSection.module.css */
+
+.hero {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.heroOverlay {
+  background-color: rgba(0, 0, 0, 0.498); /* Darker overlay for better contrast */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.heroContent {
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding-bottom: 2.5rem; /* Adjust padding as needed */
+}
+
+.textShadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
