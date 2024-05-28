@@ -11,7 +11,6 @@ import LogoClouds from '../components/LogoClouds';
 import ServicesSection5 from "@/components/ServicesSection5";
 import MortgageAffordabilityCalculator from "@/components/MortgageAffordabilityCalculator";
 import MortgageCalculator from "@/components/MortgageCalculator";
-import MortgageCalculator1 from "@/components/MortgageCalculator1";
 import MortgageApplicationForm from "@/components/MortgageApplicationForm";
 
 
@@ -33,7 +32,6 @@ export default function Home() {
       <ServicesSection5 />
       <MortgageAffordabilityCalculator />
       <MortgageCalculator />
-      <MortgageCalculator1 />
       <MortgageApplicationForm />
       <ImageContext />
       <Blogs />
