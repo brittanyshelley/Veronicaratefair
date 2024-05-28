@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function LogoClouds() {
   return (
-    <div className="bg-base-200 py-24 sm:py-32">
+    <div className="bg-gradient-to-r from-blue-400 to-blue-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-lg font-semibold leading-8 text-base-content">
           Working with the industry&apos;s best lending partners

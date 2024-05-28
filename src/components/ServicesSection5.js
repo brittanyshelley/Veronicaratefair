@@ -177,13 +177,13 @@ const ServiceCard = ({ service }) => (
     <div className="text-3xl mb-2">{service.icon}</div> {/* Icon added here */}
     <div className="text-lg mb-2">{service.title}</div>
     <div className="mb-4">{service.description}</div>
-    <button className="bg-gradient-to-r from-blue-800 to-slate-800 text-white py-2 px-4 rounded">Learn More</button>
+    <button className="bg-gradient-to-r from-blue-400 to-blue-900 text-white py-2 px-4 rounded">Learn More</button>
   </div>
 );
 
 export default function ServicesSection5() {
   return (
-    <div className="bg-gradient-to-r from-blue-800 to-slate-300 p-10 text-black flex justify-center items-center">
+    <div className="bg-gradient-to-r from-blue-400 to-blue-900 p-10 text-black flex justify-center items-center">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
         {services.map((service, index) => (
           <ServiceCard key={index} service={service} />
