@@ -5,8 +5,8 @@ export default function BlogList({ posts }) {
       <div className="container mx-auto px-4 py-8  p-10  text-base-content">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {posts.map((post, index) => (
-            <div key={index} className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
-              <div className="card-body">
+            <div key={index} className="card  shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+              <div className="bg-white/40 backdrop-blur-lg p-6 shadow-xl hover:scale-105 transition-transform rounded-lg text-center">
                 <h2 className="card-title">{post.title}</h2>
                 <p>{post.excerpt}</p>
                 <div className="card-actions justify-end">
