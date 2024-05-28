@@ -281,9 +281,9 @@ import { Autoplay } from 'swiper/modules';
 
 export default function Testimonials() {
   return (
-    <section className="py-16 bg-base-200 text-base-content" >
+    <section className="py-16 bg-gradient-to-r from-blue-400 to-black text-accent" >
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-10 text-primary">What Our Clients Say</h2>
+        <h2 className="text-4xl font-bold text-center mb-10 text-accent">What Our Clients Say</h2>
         <Swiper
           spaceBetween={30}
           centeredSlides={true}

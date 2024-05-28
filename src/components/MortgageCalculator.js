@@ -63,45 +63,6 @@ const MortgageCalculator = () => {
     setMonthlyPayment(monthlyPayment.toFixed(2));
   };
 
-  //   return (
-  //     <div>
-  //       <h2>Mortgage Calculator</h2>
-  //       <div>
-  //         <label>Loan Amount ($):</label>
-  //         <input
-  //           type="number"
-  //           value={loanAmount}
-  //           onChange={(e) => setLoanAmount(e.target.value)}
-  //         />
-  //       </div>
-  //       <div>
-  //         <label>Interest Rate (%):</label>
-  //         <input
-  //           type="number"
-  //           value={interestRate}
-  //           onChange={(e) => setInterestRate(e.target.value)}
-  //         />
-  //       </div>
-  //       <div>
-  //         <label>Loan Term (years):</label>
-  //         <input
-  //           type="number"
-  //           value={loanTerm}
-  //           onChange={(e) => setLoanTerm(e.target.value)}
-  //         />
-  //       </div>
-  //       <button onClick={calculateMonthlyPayment}>Calculate</button>
-  //       {monthlyPayment > 0 && (
-  //         <div>
-  //           <h3>Monthly Payment:</h3>
-  //           <p>${monthlyPayment}</p>
-  //         </div>
-  //       )}
-  //     </div>
-  //   );
-  // };
-
-  // export default MortgageCalculator;
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl mx-auto p-5">
