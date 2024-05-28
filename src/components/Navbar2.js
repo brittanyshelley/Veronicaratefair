@@ -69,7 +69,7 @@ const Navbar2 = () => {
                 height={50}
                 className="object-contain"
               />
-              <span className="text-lg text-base-content">VERONICA</span>
+              <span className="text-lg text-base-content">VERONICA KARUP</span>
             </Link>
           </div>
           <div

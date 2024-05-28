@@ -189,42 +189,121 @@
 
 
 import React, { useRef, useState } from 'react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/css'; // Import Swiper styles
+// import 'swiper/css/pagination'; // Import styles for the pagination
+// import 'swiper/css/navigation';
+// import testimonials from '../data/testimonialsData';
+
+
+// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+// export default function Testimonials() {
+//   return (
+//     <section className="py-10 bg-base-200 text-base-content" data-theme="mytheme">
+//       <div className="container mx-auto px-4">
+//         <h2 className="text-3xl font-semibold text-center">What Our Clients Say</h2>
+//         {/* Swiper container */}
+//         <Swiper
+//           spaceBetween={30}
+//           centeredSlides={true}
+//           autoplay={{
+//             delay: 10000,
+//             disableOnInteraction: false,
+//           }}
+//           pagination={{
+//             clickable: true,
+//           }}
+//           navigation={true}
+//           modules={[Autoplay, Pagination, Navigation]}
+//           className="mySwiper"
+//         >
+//           {/* Mapping testimonials to SwiperSlides */}
+//           {testimonials.map(({ id, name, position, testimonial }) => (
+//             <SwiperSlide key={id} className="bg-base-100 bg-opacity/40 backdrop-blur-lg py-7 rounded-md ">
+//               <h1 className="text-sm font-medium text-content-base text-center py-5">{testimonial}</h1>
+//               <p className="mt-4 text-sm text-accent text-center">{name}, {position}</p>
+//             </SwiperSlide>
+
+//           ))}
+//         </Swiper>
+//       </div>
+//     </section>
+//   );
+// }
+
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/css'; // Import Swiper styles
+// import 'swiper/css/pagination'; // Import styles for the pagination
+// import 'swiper/css/navigation';
+// import testimonials from '../data/testimonialsData';
+// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+// export default function Testimonials() {
+//   return (
+//     <section className="py-16 bg-base-200 text-base-content" >
+//       <div className="container mx-auto px-4">
+//         <h2 className="text-4xl font-bold text-center mb-10 text-primary">What Our Clients Say</h2>
+//         <Swiper
+//           spaceBetween={30}
+//           centeredSlides={true}
+//           autoplay={{
+//             delay: 5000,
+//             disableOnInteraction: false,
+//           }}
+//           pagination={{
+//             clickable: true,
+//             dynamicBullets: true,
+//           }}
+//           navigation={true}
+//           modules={[Autoplay, Pagination, Navigation]}
+//           className="mySwiper"
+//         >
+//           {testimonials.map(({ id, name, position, testimonial }) => (
+//             <SwiperSlide key={id} className="bg-base-100 bg-opacity-70 backdrop-blur-lg py-10 px-6 rounded-lg shadow-lg">
+//               <h1 className="text-xl font-medium text-base-content text-center mb-6">{testimonial}</h1>
+//               <p className="mt-4 text-lg text-secondary text-center">{name}, {position}</p>
+//             </SwiperSlide>
+//           ))}
+//         </Swiper>
+//       </div>
+//     </section>
+//   );
+// }
+
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Import Swiper styles
-import 'swiper/css/pagination'; // Import styles for the pagination
-import 'swiper/css/navigation';
+// import 'swiper/css/pagination'; // Import styles for the pagination
+// import 'swiper/css/navigation';
 import testimonials from '../data/testimonialsData';
-
-
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 export default function Testimonials() {
   return (
-    <section className="py-10 bg-base-200 text-base-content" data-theme="mytheme">
+    <section className="py-16 bg-base-200 text-base-content" >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center">What Our Clients Say</h2>
-        {/* Swiper container */}
+        <h2 className="text-4xl font-bold text-center mb-10 text-primary">What Our Clients Say</h2>
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 10000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           pagination={{
             clickable: true,
+            dynamicBullets: true,
           }}
           navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
+          modules={[Autoplay]}
           className="mySwiper"
         >
-          {/* Mapping testimonials to SwiperSlides */}
           {testimonials.map(({ id, name, position, testimonial }) => (
-            <SwiperSlide key={id} className="bg-base-100 bg-opacity/40 backdrop-blur-lg py-7 rounded-md ">
-              <h1 className="text-sm font-medium text-content-base text-center py-5">{testimonial}</h1>
-              <p className="mt-4 text-sm text-accent text-center">{name}, {position}</p>
+            <SwiperSlide key={id} className="bg-base-100 bg-opacity-70 backdrop-blur-lg py-10 px-6 rounded-lg shadow-lg">
+              <h1 className="text-xl font-medium text-base-content text-center mb-6">{testimonial}</h1>
+              <p className="mt-4 text-lg text-secondary text-center">{name}, {position}</p>
             </SwiperSlide>
-
           ))}
         </Swiper>
       </div>

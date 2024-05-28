@@ -41,7 +41,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-10 bg-gradient-to-r from-orange-500 to-red-600 text-base-content">
+    <section className="py-10 bg-gradient-to-r from-blue-400 to-black text-base-content">
       <div className="mx-auto flex flex-col md:flex-row items-center justify-center gap-8 p-5 ">
         <div className="w-full md:flex-1 bg-base-100 rounded-lg p-6 shadow-lg">
           <h2 className="text-primary text-lg font-medium title-font mb-5">Get In Touch</h2>

@@ -2,7 +2,6 @@ import { Montserrat } from "next/font/google";
 import React from 'react';
 import Head from 'next/head';
 import Testimonials from '../components/Testimonials'; // Ensure you have this component
-import Testimonials2 from '../components/Testimonials2';
 import HeroSection from '../components/HeroSection';
 import ContactForm from '../components/ContactForm';
 import ImageContext from '../components/ImageContext';
@@ -39,7 +38,6 @@ export default function Home() {
       <ImageContext />
       <Blogs />
       <Testimonials />
-      <Testimonials2 />
       <ContactForm />
 
     </main>
