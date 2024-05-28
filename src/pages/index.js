@@ -11,12 +11,7 @@ import LogoClouds from '../components/LogoClouds';
 import ServicesSection5 from "@/components/ServicesSection5";
 import MortgageAffordabilityCalculator from "@/components/MortgageAffordabilityCalculator";
 import MortgageCalculator from "@/components/MortgageCalculator";
-import MortgageApplicationForm from "@/components/MortgageApplicationForm";
 
-
-
-
-const inter = Montserrat({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -32,7 +27,6 @@ export default function Home() {
       <ServicesSection5 />
       <MortgageAffordabilityCalculator />
       <MortgageCalculator />
-      <MortgageApplicationForm />
       <ImageContext />
       <Blogs />
       <Testimonials />

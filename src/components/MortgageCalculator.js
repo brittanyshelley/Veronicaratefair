@@ -6,128 +6,128 @@
 //   const [loanTerm, setLoanTerm] = useState('');
 //   const [monthlyPayment, setMonthlyPayment] = useState(0);
 
+// Last edited: 2023-06-08
+// import React, { useState } from 'react';
 
-import React, { useState } from 'react';
+// const MortgageCalculator = () => {
+//   const [loanAmount, setLoanAmount] = useState('');
+//   const [interestRate, setInterestRate] = useState('');
+//   const [loanTerm, setLoanTerm] = useState('');
+//   const [monthlyPayment, setMonthlyPayment] = useState(0);
 
-const MortgageCalculator = () => {
-  const [loanAmount, setLoanAmount] = useState('');
-  const [interestRate, setInterestRate] = useState('');
-  const [loanTerm, setLoanTerm] = useState('');
-  const [monthlyPayment, setMonthlyPayment] = useState(0);
+//   const [errors, setErrors] = useState({
+//     loanAmount: '',
+//     interestRate: '',
+//     loanTerm: ''
+//   });
 
-  const [errors, setErrors] = useState({
-    loanAmount: '',
-    interestRate: '',
-    loanTerm: ''
-  });
+//   const validateField = (name, value) => {
+//     if (!value || value <= 0) {
+//       setErrors(prevErrors => ({ ...prevErrors, [name]: 'Value must be greater than zero.' }));
+//     } else {
+//       setErrors(prevErrors => ({ ...prevErrors, [name]: '' }));
+//     }
+//   };
 
-  const validateField = (name, value) => {
-    if (!value || value <= 0) {
-      setErrors(prevErrors => ({ ...prevErrors, [name]: 'Value must be greater than zero.' }));
-    } else {
-      setErrors(prevErrors => ({ ...prevErrors, [name]: '' }));
-    }
-  };
+//   const handleLoanAmountChange = (e) => {
+//     setLoanAmount(e.target.value);
+//     validateField('loanAmount', e.target.value);
+//   };
 
-  const handleLoanAmountChange = (e) => {
-    setLoanAmount(e.target.value);
-    validateField('loanAmount', e.target.value);
-  };
+//   const handleInterestRateChange = (e) => {
+//     setInterestRate(e.target.value);
+//     validateField('interestRate', e.target.value);
+//   };
 
-  const handleInterestRateChange = (e) => {
-    setInterestRate(e.target.value);
-    validateField('interestRate', e.target.value);
-  };
+//   const handleLoanTermChange = (e) => {
+//     setLoanTerm(e.target.value);
+//     validateField('loanTerm', e.target.value);
+//   };
 
-  const handleLoanTermChange = (e) => {
-    setLoanTerm(e.target.value);
-    validateField('loanTerm', e.target.value);
-  };
-
-  const calculateMonthlyPayment = () => {
-    if (errors.loanAmount || errors.interestRate || errors.loanTerm) {
-      alert("Please correct the errors before calculating.");
-      return;
-    }
-
-
-  // const calculateMonthlyPayment = () => {
-    const principal = parseFloat(loanAmount);
-    const monthlyInterestRate = parseFloat(interestRate) / 100 / 12;
-    const numberOfPayments = parseFloat(loanTerm) * 12;
-
-    const monthlyPayment =
-      (principal * monthlyInterestRate) /
-      (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
-
-    setMonthlyPayment(monthlyPayment.toFixed(2));
-  };
+//   const calculateMonthlyPayment = () => {
+//     if (errors.loanAmount || errors.interestRate || errors.loanTerm) {
+//       alert("Please correct the errors before calculating.");
+//       return;
+//     }
 
 
-  return (
-    <div className="card w-96 bg-base-100 shadow-xl mx-auto p-5">
-      <div className="card-body">
-        <h2 className="card-title">Mortgage Calculator</h2>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Loan Amount ($):</span>
-          </label>
-          <input
-            type="number"
-            value={loanAmount}
-            onChange={handleLoanAmountChange}
-            className={`input input-bordered ${errors.loanAmount ? 'input-error' : ''}`}
-            min="0.01"
-            required
-            placeholder="Loan amount"
-          />
-          {errors.loanAmount && <p className="text-red-500 text-xs">{errors.loanAmount}</p>}
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Interest Rate (%):</span>
-          </label>
-          <input
-            type="number"
-            value={interestRate}
-            onChange={handleInterestRateChange}
-            className={`input input-bordered ${errors.interestRate ? 'input-error' : ''}`}
-            min="0.01"
-            required
-            placeholder="Interest Rate"
-          />
-          {errors.interestRate && <p className="text-red-500 text-xs">{errors.interestRate}</p>}
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Loan Term (years):</span>
-          </label>
-          <input
-            type="number"
-            value={loanTerm}
-            onChange={handleLoanTermChange}
-            className={`input input-bordered ${errors.loanTerm ? 'input-error' : ''}`}
-            min="1"
-            required
-            placeholder="Loan Term"
-          />
-          {errors.loanTerm && <p className="text-red-500 text-xs">{errors.loanTerm}</p>}
-        </div>
-        <div className="form-control mt-4">
-          <button className="btn btn-primary" onClick={calculateMonthlyPayment}>Calculate</button>
-        </div>
-        {monthlyPayment > 0 && (
-          <div className="alert alert-success mt-4">
-            <h3 className="alert-title">Monthly Payment:</h3>
-            <p>${monthlyPayment}</p>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
+//   // const calculateMonthlyPayment = () => {
+//     const principal = parseFloat(loanAmount);
+//     const monthlyInterestRate = parseFloat(interestRate) / 100 / 12;
+//     const numberOfPayments = parseFloat(loanTerm) * 12;
 
-export default MortgageCalculator;
+//     const monthlyPayment =
+//       (principal * monthlyInterestRate) /
+//       (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
+
+//     setMonthlyPayment(monthlyPayment.toFixed(2));
+//   };
+
+
+//   return (
+//     <div className="card w-96 bg-base-100 shadow-xl mx-auto p-5">
+//       <div className="card-body">
+//         <h2 className="card-title text-primary">Mortgage Calculator</h2>
+//         <div className="form-control">
+//           <label className="label">
+//             <span className="label-text">Loan Amount ($):</span>
+//           </label>
+//           <input
+//             type="number"
+//             value={loanAmount}
+//             onChange={handleLoanAmountChange}
+//             className={`input input-bordered ${errors.loanAmount ? 'input-error' : ''}`}
+//             min="0.01"
+//             required
+//             placeholder="Loan amount"
+//           />
+//           {errors.loanAmount && <p className="text-red-500 text-xs">{errors.loanAmount}</p>}
+//         </div>
+//         <div className="form-control">
+//           <label className="label">
+//             <span className="label-text">Interest Rate (%):</span>
+//           </label>
+//           <input
+//             type="number"
+//             value={interestRate}
+//             onChange={handleInterestRateChange}
+//             className={`input input-bordered ${errors.interestRate ? 'input-error' : ''}`}
+//             min="0.01"
+//             required
+//             placeholder="Interest Rate"
+//           />
+//           {errors.interestRate && <p className="text-red-500 text-xs">{errors.interestRate}</p>}
+//         </div>
+//         <div className="form-control">
+//           <label className="label">
+//             <span className="label-text">Loan Term (years):</span>
+//           </label>
+//           <input
+//             type="number"
+//             value={loanTerm}
+//             onChange={handleLoanTermChange}
+//             className={`input input-bordered ${errors.loanTerm ? 'input-error' : ''}`}
+//             min="1"
+//             required
+//             placeholder="Loan Term"
+//           />
+//           {errors.loanTerm && <p className="text-red-500 text-xs">{errors.loanTerm}</p>}
+//         </div>
+//         <div className="form-control mt-4">
+//           <button className="btn btn-primary" onClick={calculateMonthlyPayment}>Calculate</button>
+//         </div>
+//         {monthlyPayment > 0 && (
+//           <div className="alert alert-success mt-4">
+//             <h3 className="alert-title">Monthly Payment:</h3>
+//             <p>${monthlyPayment}</p>
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default MortgageCalculator;
 
 //   return (
 //     <div className="card w-96 bg-base-100 shadow-xl mx-auto p-5">
@@ -283,3 +283,125 @@ export default MortgageCalculator;
 // };
 
 // export default MortgageCalculator;
+
+
+import React, { useState } from 'react';
+
+const MortgageCalculator = () => {
+  const [loanAmount, setLoanAmount] = useState('');
+  const [interestRate, setInterestRate] = useState('');
+  const [loanTerm, setLoanTerm] = useState('');
+  const [monthlyPayment, setMonthlyPayment] = useState(0);
+
+  const [errors, setErrors] = useState({
+    loanAmount: '',
+    interestRate: '',
+    loanTerm: ''
+  });
+
+  const validateField = (name, value) => {
+    if (!value || parseFloat(value) <= 0) {
+      setErrors(prevErrors => ({ ...prevErrors, [name]: 'Value must be greater than zero.' }));
+    } else {
+      setErrors(prevErrors => ({ ...prevErrors, [name]: '' }));
+    }
+  };
+
+  const handleLoanAmountChange = (e) => {
+    setLoanAmount(e.target.value);
+    validateField('loanAmount', e.target.value);
+  };
+
+  const handleInterestRateChange = (e) => {
+    setInterestRate(e.target.value);
+    validateField('interestRate', e.target.value);
+  };
+
+  const handleLoanTermChange = (e) => {
+    setLoanTerm(e.target.value);
+    validateField('loanTerm', e.target.value);
+  };
+
+  const calculateMonthlyPayment = () => {
+    if (errors.loanAmount || errors.interestRate || errors.loanTerm) {
+      alert("Please correct the errors before calculating.");
+      return;
+    }
+
+    const principal = parseFloat(loanAmount);
+    const monthlyInterestRate = parseFloat(interestRate) / 100 / 12;
+    const numberOfPayments = parseFloat(loanTerm) * 12;
+
+    const monthlyPayment =
+      (principal * monthlyInterestRate) /
+      (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
+
+    setMonthlyPayment(monthlyPayment.toFixed(2));
+  };
+
+  return (
+    <div className="container mx-auto p-4">
+      <div className="card w-96 bg-base-100 shadow-xl mx-auto p-5">
+        <div className="card-body">
+          <h2 className="card-title text-primary">Mortgage Calculator</h2>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Loan Amount ($):</span>
+            </label>
+            <input
+              type="number"
+              value={loanAmount}
+              onChange={handleLoanAmountChange}
+              className={`input input-bordered ${errors.loanAmount ? 'input-error' : ''}`}
+              min="0.01"
+              required
+              placeholder="Loan amount"
+            />
+            {errors.loanAmount && <p className="text-red-500 text-xs">{errors.loanAmount}</p>}
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Interest Rate (%):</span>
+            </label>
+            <input
+              type="number"
+              value={interestRate}
+              onChange={handleInterestRateChange}
+              className={`input input-bordered ${errors.interestRate ? 'input-error' : ''}`}
+              min="0.01"
+              required
+              placeholder="Interest Rate"
+            />
+            {errors.interestRate && <p className="text-red-500 text-xs">{errors.interestRate}</p>}
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Loan Term (years):</span>
+            </label>
+            <input
+              type="number"
+              value={loanTerm}
+              onChange={handleLoanTermChange}
+              className={`input input-bordered ${errors.loanTerm ? 'input-error' : ''}`}
+              min="1"
+              required
+              placeholder="Loan Term"
+            />
+            {errors.loanTerm && <p className="text-red-500 text-xs">{errors.loanTerm}</p>}
+          </div>
+          <div className="form-control mt-4">
+            <button className="btn btn-primary" onClick={calculateMonthlyPayment}>Calculate</button>
+          </div>
+          {monthlyPayment > 0 && (
+            <div className="alert alert-success mt-4">
+              <h3 className="alert-title">Monthly Payment:</h3>
+              <p>${monthlyPayment}</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MortgageCalculator;
