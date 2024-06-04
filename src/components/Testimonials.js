@@ -302,7 +302,7 @@ export default function Testimonials() {
           {testimonials.map(({ id, name, position, testimonial }) => (
             <SwiperSlide key={id} className="bg-base-100 bg-opacity-70 backdrop-blur-lg py-10 px-6 rounded-lg shadow-lg">
               <h1 className="text-xl font-medium text-base-content text-center mb-6">{testimonial}</h1>
-              <p className="mt-4 text-lg text-secondary text-center">{name}, {position}</p>
+              <p className="mt-4 text-lg text-black text-center">{name}, {position}</p>
             </SwiperSlide>
           ))}
         </Swiper>
