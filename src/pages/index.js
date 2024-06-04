@@ -7,6 +7,7 @@ import ContactForm from '../components/ContactForm';
 import AboutMe from '../components/AboutMe';
 import LogoClouds from '../components/LogoClouds';
 import ServicesSection5 from "@/components/ServicesSection5";
+import MortgageAffordabilityCalculator from "@/components/MortgageAffordabilityCalculator";
 
 
 
@@ -21,6 +22,7 @@ export default function Home() {
       <AboutMe />
       <LogoClouds />
       <ServicesSection5 />
+      <MortgageAffordabilityCalculator />
       <Testimonials />
       <ContactForm />
 
